@@ -18,6 +18,7 @@ public class SalaController {
     @MessageMapping("/criar-sala")
     @SendTo("/topic/sala-criada")
     public SalaDTO criarSala(SalaConfiguracaoDTO salaConfig) {
+        System.out.println(salaConfig);
         return service.criarSala(salaConfig);
     }
 
